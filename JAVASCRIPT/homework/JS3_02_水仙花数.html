@@ -6,11 +6,32 @@
 </head>
 <body>
 	<script type="text/javascript">
+		/*
 		for (var i = 100; i < 1000; i++) {
 		    var a = parseInt(i / 100);
 		    var b = parseInt(i % 100 / 10);
+		    // 任何数，它除以10的余数就是这个数的个位
 		    var c = i % 100 % 10;
 		    if ((a * a * a + b * b * b + c * c * c) == i) {
+		        console.log(i);
+		    }
+		}*/
+		console.log("优化！");
+		for (var j = 100; j < 1000; j++) {
+		    var a1 = parseInt(j / 100);
+		    var b1 = parseInt(j % 100 / 10);
+		    var c1 = j % 10;
+		    if (Math.pow(a1, 3) + Math.pow(b1, 3) + Math.pow(c1, 3) == j) {
+		        console.log(j);
+		    }
+		}
+		console.log("四位水仙花数");
+		for (var i = 1000; i < 10000; i++) {
+		    var a = parseInt(i /1000);
+		    var b = parseInt(i % 1000 / 100);
+		    var c = parseInt(i % 100 / 10);
+		    var d = i % 10;
+		    if (Math.pow(a, 4) + Math.pow(b, 4) + Math.pow(c, 4) + Math.pow(d, 4) == i) {
 		        console.log(i);
 		    }
 		}
