@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num = parseInt(prompt("请输入一个三位数："));
+		var bai = parseInt(num / 100);
+		// var shi = parseInt((num - bai*100) / 10);
+		var shi = parseInt(num % 100 / 10);
+		var ge = num % 10;
+		console.log(bai + "\n" + shi + "\n" + ge);
+		alert(bai + shi + ge);
+	</script>
+</body>
+</html>
